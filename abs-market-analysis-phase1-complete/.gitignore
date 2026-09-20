@@ -1,0 +1,27 @@
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# External data
+data/raw/
+data/processed/
+data/mart/
+data/cache/
+
+# Internal company data
+data/internal/raw/
+data/internal/processed/
+data/internal/mart/
+
+# Runtime provenance logs
+data/metadata/source_log.csv
+data/metadata/calculation_log.csv
+
+# Backup
+backup/

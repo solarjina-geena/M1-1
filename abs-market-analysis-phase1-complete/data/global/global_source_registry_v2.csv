@@ -1,0 +1,4 @@
+﻿source,country_code,market_group,coverage,status,note
+ANFAVEA,BRA,중남미,월별 생산/등록/수출,READY_SOURCE,1957년부터 월별 역사계열 Excel 공개; 자동 파서 연결 전
+INEGI RAIAVL,MEX,중남미,월별 판매/생산/수출,PARTIAL_LOADED,2026 공식 확인값 우선 병합; 전체 역사 XLS/API 연결 예정
+CAAM,CHN,중국,월별 생산/판매,READY_SOURCE,공식 월별 자료 확인; 자동 파서 연결 전

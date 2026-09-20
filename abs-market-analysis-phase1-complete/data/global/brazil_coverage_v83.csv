@@ -1,0 +1,4 @@
+﻿country_code,market_group,metric,vehicle_scope,start,end,calendar_months,observed_months,null_pct,missing_months,include_in_aggregate
+BRA,중남미,DOMESTIC_REGISTRATION,TOTAL_VEHICLES,2026-05-01,2026-08-01,4,4,0.0,,True
+BRA,중남미,EXPORT,TOTAL_VEHICLES,2026-02-01,2026-08-01,7,7,0.0,,True
+BRA,중남미,PRODUCTION,TOTAL_VEHICLES,2026-03-01,2026-08-01,6,6,0.0,,True

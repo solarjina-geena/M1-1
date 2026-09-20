@@ -1,0 +1,2110 @@
+
+====================================================================================================
+1. MARKET MART
+====================================================================================================
+FILE: data/mart/market_monthly.parquet
+EXISTS: True
+ROWS: 429
+COLUMNS (10): ['period', 'market_scope', 'metric', 'value', 'unit', 'source_id', 'source_key', 'estimate_flag', 'confidence_grade', 'model_version']
+
+DTYPES:
+period                  str
+market_scope            str
+metric                  str
+value               float64
+unit                    str
+source_id               str
+source_key              str
+estimate_flag           str
+confidence_grade        str
+model_version           str
+
+NULL COUNT:
+period               0
+market_scope         0
+metric               0
+value                0
+unit                 0
+source_id           11
+source_key           0
+estimate_flag        0
+confidence_grade     0
+model_version        1
+
+[period] UNIQUE=131
+['2016-01', '2016-02', '2016-03', '2016-04', '2016-05', '2016-06', '2016-07', '2016-08', '2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06', '2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04', '2018-05', '2018-06']
+
+[metric] UNIQUE=9
+['VEHICLE_PRODUCTION_TOTAL', 'VEHICLE_DOMESTIC_TOTAL', 'VEHICLE_EXPORT_TOTAL', 'VEHICLE_PRODUCTION_PASSENGER', 'VEHICLE_PRODUCTION_COMMERCIAL', 'COILS_PER_SYSTEM', 'COMPANY_OV_PER_SYSTEM', 'COMPANY_HSV_PER_SYSTEM', 'COMPANY_IV_PER_SYSTEM']
+
+HEAD(12):
+ period market_scope                   metric    value unit                            source_id source_key estimate_flag confidence_grade model_version
+2016-01        KOREA VEHICLE_PRODUCTION_TOTAL 347375.0   EA          motie_pdf_metrics_final.csv      motie        ACTUAL                               
+2016-02        KOREA VEHICLE_PRODUCTION_TOTAL 347375.0   EA     motie_recovered_metrics_test.csv      motie        ACTUAL                               
+2016-03        KOREA VEHICLE_PRODUCTION_TOTAL 406897.0   EA motie_recovered_metrics_verified.csv      motie        ACTUAL                               
+2016-04        KOREA VEHICLE_PRODUCTION_TOTAL 368607.0   EA motie_recovered_metrics_verified.csv      motie        ACTUAL                               
+2016-05        KOREA VEHICLE_PRODUCTION_TOTAL 356204.0   EA     motie_recovered_metrics_test.csv      motie        ACTUAL                               
+2016-06        KOREA VEHICLE_PRODUCTION_TOTAL 382807.0   EA     motie_recovered_metrics_test.csv      motie        ACTUAL                               
+2016-07        KOREA VEHICLE_PRODUCTION_TOTAL 361158.0   EA          motie_pdf_metrics_final.csv      motie        ACTUAL                               
+2016-08        KOREA VEHICLE_PRODUCTION_TOTAL 217097.0   EA motie_recovered_metrics_verified.csv      motie        ACTUAL                               
+2016-09        KOREA VEHICLE_PRODUCTION_TOTAL 258026.0   EA motie_recovered_metrics_verified.csv      motie        ACTUAL                               
+2016-10        KOREA VEHICLE_PRODUCTION_TOTAL 347470.0   EA motie_recovered_metrics_verified.csv      motie        ACTUAL                               
+2016-11        KOREA VEHICLE_PRODUCTION_TOTAL 347470.0   EA     motie_recovered_metrics_test.csv      motie        ACTUAL                               
+2016-12        KOREA VEHICLE_PRODUCTION_TOTAL 434877.0   EA          motie_pdf_metrics_final.csv      motie        ACTUAL                               
+
+TAIL(12):
+ period market_scope                 metric  value      unit           source_id               source_key estimate_flag confidence_grade  model_version
+2026-09  MODEL_MGH20       COILS_PER_SYSTEM    8.0 EA/SYSTEM TECH_20260917184539 market_assumption_master     ESTIMATED                B            NaN
+2026-09  MODEL_IMEB3       COILS_PER_SYSTEM   14.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_MEB52       COILS_PER_SYSTEM   12.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09   MODEL_MEB5       COILS_PER_SYSTEM   12.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09   MODEL_MEB5  COMPANY_OV_PER_SYSTEM    4.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09   MODEL_MEB5 COMPANY_HSV_PER_SYSTEM    2.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_IMEB3  COMPANY_IV_PER_SYSTEM    8.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_IMEB3  COMPANY_OV_PER_SYSTEM    5.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_IMEB3 COMPANY_HSV_PER_SYSTEM    1.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_MEB52  COMPANY_IV_PER_SYSTEM    6.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_MEB52  COMPANY_OV_PER_SYSTEM    4.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+2026-09  MODEL_MEB52 COMPANY_HSV_PER_SYSTEM    2.0 EA/SYSTEM                 NaN market_assumption_master     ESTIMATED                B EST_MODEL_V1.0
+
+====================================================================================================
+2. TECHNOLOGY SIGNAL MART
+====================================================================================================
+FILE: data/mart/technology_signal.parquet
+EXISTS: True
+ROWS: 3
+COLUMNS (16): ['signal_id', 'signal_date', 'technology_id', 'signal_type', 'company', 'event', 'vehicle_volume', 'forecast_year', 'forecast_value', 'unit', 'region', 'source_id', 'confidence_grade', 'verification_status', 'notes', 'signal_year']
+
+DTYPES:
+signal_id              string
+signal_date            string
+technology_id          string
+signal_type            string
+company                string
+event                  string
+vehicle_volume         string
+forecast_year           Int64
+forecast_value          Int64
+unit                   string
+region                 string
+source_id              string
+confidence_grade       string
+verification_status    string
+notes                  string
+signal_year             Int64
+
+NULL COUNT:
+signal_id              0
+signal_date            0
+technology_id          0
+signal_type            0
+company                0
+event                  0
+vehicle_volume         3
+forecast_year          2
+forecast_value         2
+unit                   2
+region                 0
+source_id              0
+confidence_grade       0
+verification_status    0
+notes                  0
+signal_year            0
+
+[company] UNIQUE=2
+['Bosch', 'Continental']
+
+HEAD(12):
+                        signal_id signal_date         technology_id  signal_type     company                                           event vehicle_volume  forecast_year  forecast_value     unit region           source_id confidence_grade verification_status                                                                                                       notes  signal_year
+      SIG_BOSCH_BBW_FORECAST_2030        2025 TECH_INTEGRATED_BRAKE     FORECAST       Bosch           Brake-by-Wire global vehicle forecast           <NA>           2030         5500000 VEHICLE+ GLOBAL TECH_20260919131528                A            VERIFIED Bosch official forecast; more than 5.5 million vehicles worldwide expected to feature brake-by-wire by 2030         2025
+  SIG_BOSCH_BBW_MARKET_ENTRY_2025        2025 TECH_INTEGRATED_BRAKE MARKET_ENTRY       Bosch               Brake-by-Wire market introduction           <NA>           <NA>            <NA>     <NA> GLOBAL TECH_20260919131528                A            VERIFIED                 Bosch official source; hydraulic brake-by-wire market introduction planned from autumn 2025         2025
+SIG_CONTINENTAL_IBBW_RELEASE_2025        2025 TECH_INTEGRATED_BRAKE TECH_RELEASE Continental Next-generation Integrated Brake-by-Wire System           <NA>           <NA>            <NA>     <NA> GLOBAL TECH_20260919131845                A            VERIFIED                     Continental official source; next-generation integrated brake-by-wire technology signal         2025
+
+TAIL(12):
+                        signal_id signal_date         technology_id  signal_type     company                                           event vehicle_volume  forecast_year  forecast_value     unit region           source_id confidence_grade verification_status                                                                                                       notes  signal_year
+      SIG_BOSCH_BBW_FORECAST_2030        2025 TECH_INTEGRATED_BRAKE     FORECAST       Bosch           Brake-by-Wire global vehicle forecast           <NA>           2030         5500000 VEHICLE+ GLOBAL TECH_20260919131528                A            VERIFIED Bosch official forecast; more than 5.5 million vehicles worldwide expected to feature brake-by-wire by 2030         2025
+  SIG_BOSCH_BBW_MARKET_ENTRY_2025        2025 TECH_INTEGRATED_BRAKE MARKET_ENTRY       Bosch               Brake-by-Wire market introduction           <NA>           <NA>            <NA>     <NA> GLOBAL TECH_20260919131528                A            VERIFIED                 Bosch official source; hydraulic brake-by-wire market introduction planned from autumn 2025         2025
+SIG_CONTINENTAL_IBBW_RELEASE_2025        2025 TECH_INTEGRATED_BRAKE TECH_RELEASE Continental Next-generation Integrated Brake-by-Wire System           <NA>           <NA>            <NA>     <NA> GLOBAL TECH_20260919131845                A            VERIFIED                     Continental official source; next-generation integrated brake-by-wire technology signal         2025
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/technology_master.csv
+EXISTS: True
+ROWS: 6
+COLUMNS (11): ['technology_id', 'technology_group', 'technology_name_ko', 'technology_name_en', 'description', 'market_driver', 'verification_status', 'source_id', 'valid_from', 'valid_to', 'notes']
+
+HEAD(10):
+        technology_id technology_group technology_name_ko                   technology_name_en                                                   description                            market_driver verification_status           source_id  valid_from  valid_to                                                                                                                                    notes
+             TECH_ABS    BRAKE_CONTROL             ABS 제어             Anti-lock Braking System                                       휠 잠김 방지를 위한 유압 제동 제어 기술                   차량생산량×ABS장착률×시스템당Coil수           REFERENCE                 NaN         NaN       NaN                                                                                                                         외부 기술자료 추가 검증 필요
+             TECH_ESC    BRAKE_CONTROL             ESC 제어         Electronic Stability Control                                  차량 자세제어를 포함하는 전자 유압 제동 제어 기술                   차량생산량×ESC장착률×시스템당Coil수           REFERENCE                 NaN         NaN       NaN                                                                                                                         외부 기술자료 추가 검증 필요
+             TECH_EPB    BRAKE_CONTROL             EPB 연계             Electronic Parking Brake                                       전자식 주차제동 또는 제동시스템 연계 기술                  차량생산량×EPB장착률×관련Coil적용수량           REFERENCE                 NaN         NaN       NaN                                                                                                               MEB5 연계 여부 및 Coil 범위 검증 필요
+TECH_INTEGRATED_BRAKE    BRAKE_CONTROL           통합형 전자제동   Integrated Electronic Brake System     전동부스터와 ESC 기능을 통합하고 모터 및 밸브 제어를 통해 제동 유압을 생성·제어하는 전자제동 기술 차량 생산량×통합형 전자제동 장착률×시스템당 Solenoid Coil 수            VERIFIED                 NaN         NaN       NaN                                                         현대모비스 공식 자료 기준 iMEB는 ESC 통합형 전동부스터; 모터·밸브 제어를 통한 유압 생성 확인. 세대별 Coil 총수는 별도 검증 필요
+            TECH_ERCV   ACTUATOR_VALVE   터보차저 ERCV 전자기 구동 Electric Recirculation Control Valve 차량 감속 시 발생하는 배압을 빠르게 해소하여 터보차저를 보호하는 Solenoid 방식 전자식 재순환 제어밸브      터보차저 적용 차량 생산량×ERCV 장착률×차량당 ERCV 수량            VERIFIED TECH_20260912180401         NaN       NaN 캄텍 공식 제품/연혁/브로슈어 기준: ERCV는 터보차저 보호용 Electric Recirculation Control Valve; 2021 자체 설계·생산 및 Garrett 직수출 확인; 적용차종 공개됨; 차량당 수량 및 실제 장착률은 미확정
+  TECH_STATOR_UNKNOWN           STATOR      Stator 기술 미확정            Stator Technology Pending                                Stator 기반 개발품을 수용하기 위한 임시 기술분류                                     산출불가             PENDING                 NaN         NaN       NaN                                                                                                                       BLAT 상세정보 확보 후 구체화
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/technology_signal_master.csv
+EXISTS: True
+ROWS: 3
+COLUMNS (15): ['signal_id', 'signal_date', 'technology_id', 'signal_type', 'company', 'event', 'vehicle_volume', 'forecast_year', 'forecast_value', 'unit', 'region', 'source_id', 'confidence_grade', 'verification_status', 'notes']
+
+HEAD(10):
+                        signal_id  signal_date         technology_id  signal_type     company                                           event  vehicle_volume  forecast_year  forecast_value     unit region           source_id confidence_grade verification_status                                                                                                       notes
+  SIG_BOSCH_BBW_MARKET_ENTRY_2025         2025 TECH_INTEGRATED_BRAKE MARKET_ENTRY       Bosch               Brake-by-Wire market introduction             NaN            NaN             NaN      NaN GLOBAL TECH_20260919131528                A            VERIFIED                 Bosch official source; hydraulic brake-by-wire market introduction planned from autumn 2025
+      SIG_BOSCH_BBW_FORECAST_2030         2025 TECH_INTEGRATED_BRAKE     FORECAST       Bosch           Brake-by-Wire global vehicle forecast             NaN         2030.0       5500000.0 VEHICLE+ GLOBAL TECH_20260919131528                A            VERIFIED Bosch official forecast; more than 5.5 million vehicles worldwide expected to feature brake-by-wire by 2030
+SIG_CONTINENTAL_IBBW_RELEASE_2025         2025 TECH_INTEGRATED_BRAKE TECH_RELEASE Continental Next-generation Integrated Brake-by-Wire System             NaN            NaN             NaN      NaN GLOBAL TECH_20260919131845                A            VERIFIED                     Continental official source; next-generation integrated brake-by-wire technology signal
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/market_assumption_master.csv
+EXISTS: True
+ROWS: 44
+COLUMNS (14): ['assumption_id', 'technology_id', 'model_id', 'region', 'year', 'vehicle_category', 'parameter_name', 'parameter_value', 'unit', 'estimate_flag', 'confidence_grade', 'source_id', 'model_version', 'notes']
+
+HEAD(10):
+       assumption_id         technology_id model_id region  year vehicle_category         parameter_name parameter_value       unit estimate_flag confidence_grade           source_id model_version                                                             notes
+ ASM_ABS_VEHICLE_QTY              TECH_ABS      NaN GLOBAL   NaN              NaN vehicle_production_qty             NaN         EA       MISSING              NaN                 NaN           NaN                                                   외부 차량 생산량 연결 필요
+     ASM_ABS_FITMENT              TECH_ABS      NaN GLOBAL   NaN              NaN           fitment_rate             NaN      RATIO       MISSING              NaN                 NaN           NaN                                                     ABS 장착률 근거 필요
+ ASM_ABS_SYS_PER_VEH              TECH_ABS      NaN GLOBAL   NaN              NaN    systems_per_vehicle               1 EA/VEHICLE     ESTIMATED                B TECH_20260917163628           NaN Bosch 공식 ABS 기술구조를 근거로 ABS 장착차량당 1시스템으로 추정; 개별 모델 양산 BOM 직접 확인 필요
+ASM_ABS_COIL_PER_SYS              TECH_ABS      NaN GLOBAL   NaN              NaN       coils_per_system             NaN  EA/SYSTEM       MISSING              NaN                 NaN           NaN                                                  모델별 Coil 수 검증 필요
+ ASM_ESC_VEHICLE_QTY              TECH_ESC      NaN GLOBAL   NaN              NaN vehicle_production_qty             NaN         EA       MISSING              NaN                 NaN           NaN                                                   외부 차량 생산량 연결 필요
+     ASM_ESC_FITMENT              TECH_ESC      NaN GLOBAL   NaN              NaN           fitment_rate             NaN      RATIO       MISSING              NaN                 NaN           NaN                                                     ESC 장착률 근거 필요
+ ASM_ESC_SYS_PER_VEH              TECH_ESC      NaN GLOBAL   NaN              NaN    systems_per_vehicle             NaN EA/VEHICLE       MISSING              NaN                 NaN           NaN                                                       기본 구조 검증 필요
+ASM_ESC_COIL_PER_SYS              TECH_ESC      NaN GLOBAL   NaN              NaN       coils_per_system             NaN  EA/SYSTEM       MISSING              NaN                 NaN           NaN                                                  모델별 Coil 수 검증 필요
+ ASM_IBS_VEHICLE_QTY TECH_INTEGRATED_BRAKE      NaN GLOBAL   NaN              NaN vehicle_production_qty             NaN         EA       MISSING              NaN                 NaN           NaN                                                 통합제동 적용 차량 생산량 필요
+     ASM_IBS_FITMENT TECH_INTEGRATED_BRAKE      NaN GLOBAL   NaN              NaN           fitment_rate             NaN      RATIO       MISSING              NaN                 NaN           NaN                                                    통합제동 장착률 근거 필요
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/source_log.csv
+EXISTS: True
+ROWS: 13
+COLUMNS (10): ['source_id', 'source_key', 'source_name', 'basis_date', 'collected_at', 'source_url', 'raw_file_path', 'sha256', 'status', 'notes']
+
+HEAD(10):
+                              source_id source_key        source_name    basis_date               collected_at                                                                                            source_url                                                                                                                                                     raw_file_path                                                           sha256  status                                                                                                                                                                                              notes
+       TRADE_20260912165131_HS870830_US      trade        관세청 수출입무역통계 202501-202501        2026-09-12T16:51:31                                          https://apis.data.go.kr/1220000/nitemtrade/getNitemtradeList                                D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\trade\2026-09-12_165131_HS870830_202501-202501_US.xml 6c5394e85dd5cea1093da4de2ca152eca412fd7ab15c9a8af52e087f9ec2a7e4 SUCCESS                                                                                                                                                                              HS=870830; country=US
+       TRADE_20260912170708_HS848120_US      trade        관세청 수출입무역통계 202501-202501        2026-09-12T17:07:08                                          https://apis.data.go.kr/1220000/nitemtrade/getNitemtradeList                                D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\trade\2026-09-12_170708_HS848120_202501-202501_US.xml 2760155c680eb6bd01b3a4bf3899ab54a8c8d13355eecb63f6e9cafbc924c98e SUCCESS                                                                                                                                                                              HS=848120; country=US
+       TRADE_20260912170813_HS850520_US      trade        관세청 수출입무역통계 202501-202501        2026-09-12T17:08:13                                          https://apis.data.go.kr/1220000/nitemtrade/getNitemtradeList                                D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\trade\2026-09-12_170811_HS850520_202501-202501_US.xml cd2d459635a10554ffcb7dfa260a428e8abb3a2aa018a014860b6de4d9b4aa7a SUCCESS                                                                                                                                                                              HS=850520; country=US
+                    TECH_20260912180401  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-12T18:04:01                                                          https://www.kamtec.co.kr/dh/business_parts12                      D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260912180401_KAMTEC_ERCV_Official_Product_Page.html 61ac8f729213c266d7c3900c10f4f60476bf7c028ac1713417576864233de140 SUCCESS                                                                                                                                                                                  캄텍 공식 ERCV 제품 페이지
+                    TECH_20260912180730  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-12T18:07:30                                                     https://patents.google.com/patent/US12409819B2/en D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260912180730_Hyundai_Mobis_Integrated_Electronic_Brake_US12409819B2.html a7fb79915133898c84be43e06f636e5893a6cdf3d8a27737fbbe35f22c2b511b SUCCESS                                                                                                                                                             현대모비스 통합 전자제동 시스템 특허; iMEB 계열 기술구조 검증용
+KOSIS_20260912182927_VEHICLE_PRODUCTION      kosis       국가통계포털 KOSIS          2024 2026-09-12T18:29:27.033135                                      https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_2KAA511                        D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\kosis\20260912182927_KOSIS_DT_2KAA511_vehicle_production.json 7ea9142778b8b4c2ba650e773e23aa39d8813381ac97ac82d215c9a7e371a8b4 SUCCESS                                                                                                                       KOSIS vehicle production: Korea/World x Total/Passenger/Commercial 2010-2024
+                    TECH_20260917163628  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-17T16:36:28                   https://www.bosch-mobility.com/en/solutions/driving-safety/antilock-braking-system/                                     D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260917163628_Bosch_ABS_Official.html 9a32418ca1fb20dd40141f4e17102689308445473f3a983963da332e971957ae SUCCESS                                                                                                                        Bosch official ABS technical structure; systems_per_vehicle evidence review
+                    TECH_20260917180801  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-17T18:08:01                                           https://www.korea.kr/news/interviewView.do?newsId=148718047                           D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260917180801_Korea_ABS_Mandatory_Regulation.do ef4147ed26b57bfe9f2c30206ff8f2c4f5947bbdad603fca73b536be5e11a28c SUCCESS                                                                         Korea government source; ABS mandatory installation regulation effective from May 2012; market fitment assumption evidence
+                    TECH_20260917184539  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-17T18:45:39 https://saemobilus.sae.org/papers/a-model-based-design-analysis-hydraulic-braking-system-2003-01-0253                           D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260917184539_Mando_MGH20_SAE_2003_01_0253.html 48ba289382d5557ddc686c3c93050b395399859bfc48a451d45b9fe82d6ef77a SUCCESS MANDO R&D SAE technical paper; MGH-20 series-production ABS hydraulic system and solenoid-valve technical evidence; 8 coils/system remains ESTIMATED pending direct coil-to-valve BOM confirmation
+                    TECH_20260917192750  technical 공개 기술자료 / 제조사 공식자료           NaN        2026-09-17T19:27:50                                                          https://careers.mobis.com/jobs-view?seq=1291                            D:\코디세이\LEVEL3 응용\M1-1\abs-market-analysis-v0.1\abs-market-analysis\data\raw\technical\20260917192750_Hyundai_Mobis_iMEB_Official.html 583b7f54119900ba8f506502cb2b9ae4586580d783f8d4d64334156e0e1789c4 SUCCESS               Hyundai Mobis official source: iMEB defined as integrated Mobis Electronic Brake system (ESC-integrated electric booster); actuator controls motors and valves for hydraulic braking
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/model_technology_map.csv
+EXISTS: True
+ROWS: 14
+COLUMNS (6): ['model_id', 'technology_id', 'relation_type', 'verification_status', 'source_id', 'notes']
+
+HEAD(10):
+   model_id         technology_id relation_type verification_status  source_id                   notes
+MODEL_MGH10              TECH_ABS       PRIMARY           REFERENCE        NaN           회사소개서 제품계보 기준
+MODEL_MGH20              TECH_ABS       PRIMARY           REFERENCE        NaN           회사소개서 제품계보 기준
+  MODEL_FBS              TECH_ABS       PRIMARY           REFERENCE        NaN           회사소개서 제품계보 기준
+ MODEL_MEB4              TECH_ABS       RELATED           REFERENCE        NaN                외부 검증 필요
+ MODEL_MEB4              TECH_ESC       PRIMARY           REFERENCE        NaN                외부 검증 필요
+ MODEL_MEB5              TECH_ABS       RELATED           REFERENCE        NaN                외부 검증 필요
+ MODEL_MEB5              TECH_ESC       PRIMARY           REFERENCE        NaN                외부 검증 필요
+ MODEL_MEB5              TECH_EPB       RELATED           REFERENCE        NaN EPB와 Coil 적용관계 별도 검증 필요
+MODEL_IDB10 TECH_INTEGRATED_BRAKE       PRIMARY           REFERENCE        NaN         세부 시스템 구조 검증 필요
+MODEL_MEB52              TECH_ESC       PRIMARY           REFERENCE        NaN  ESC+ 정의와 Coil 구성 검증 필요
+
+====================================================================================================
+METADATA
+====================================================================================================
+FILE: data/metadata/company_master.csv
+EXISTS: True
+ROWS: 0
+COLUMNS (12): ['company_id', 'company_name_ko', 'company_name_en', 'parent_company_id', 'parent_hq_country', 'subsidiary_name', 'plant_name', 'plant_country', 'ownership_type', 'valid_from', 'valid_to', 'source_id']
+
+HEAD(10):
+Empty DataFrame
+Columns: [company_id, company_name_ko, company_name_en, parent_company_id, parent_hq_country, subsidiary_name, plant_name, plant_country, ownership_type, valid_from, valid_to, source_id]
+Index: []
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: processors/market_mart.py
+EXISTS: True
+LINES: 261
+﻿from pathlib import Path
+
+import pandas as pd
+
+from config.settings import PATH_CONFIG
+from config.schemas import MARKET_MONTHLY_COLUMNS
+from loaders.kosis_loader import load_latest_vehicle_production_processed
+from loaders.master_loader import load_market_assumption_master
+
+
+
+
+OUTPUT_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "data"
+    / "mart"
+    / "market_monthly.parquet"
+)
+# ============================================================
+# [MOTIE 월별 자동차 시장 데이터]
+# 산업통상부 자동차산업 월별 MASTER를 시장 MART에 연결합니다.
+#
+# 데이터:
+#   data/raw/motie/motie_monthly_master.csv
+#
+# 컬럼:
+#   period      : YYYY-MM
+#   production  : 생산량
+#   domestic    : 내수 판매량
+#   export      : 수출량
+#
+# 중요:
+#   일부 월은 원자료가 없으므로 임의 보간하지 않습니다.
+#   실제 확보된 월만 분석에 사용합니다.
+# ============================================================
+
+MOTIE_MONTHLY_MASTER = (
+    Path(__file__).resolve().parents[1]
+    / "data"
+    / "raw"
+    / "motie"
+    / "motie_monthly_master.csv"
+)
+
+def build_market_mart() -> pd.DataFrame:
+    production = load_latest_vehicle_production_processed()
+
+    rows = []
+    # ========================================================
+    # [1] MOTIE 월별 자동차 시장 데이터 연결
+    # ========================================================
+    # 우리가 검증/정리한 월별 MASTER를 읽습니다.
+    #
+    # period     : 기준월 (예: 2026-08)
+    # production : 국내 자동차 생산량
+    # domestic   : 국내 자동차 내수 판매량
+    # export     : 국내 자동차 수출량
+    #
+    # 결측월은 임의로 보간하지 않습니다.
+    # 실제 데이터가 존재하는 월만 시장 MART에 저장합니다.
+    # ========================================================
+
+    if MOTIE_MONTHLY_MASTER.exists():
+        motie = pd.read_csv(
+            MOTIE_MONTHLY_MASTER,
+            dtype={"period": str},
+        )
+
+        # ----------------------------------------------------
+        # [1-1] 숫자 컬럼 정리
+        # 문자 등이 섞여 있어도 숫자로 안전하게 변환합니다.
+        # ----------------------------------------------------
+        for col in ["production", "domestic", "export"]:
+            motie[col] = pd.to_numeric(
+                motie[col],
+                errors="coerce",
+            )
+
+        # ----------------------------------------------------
+        # [1-2] MASTER 컬럼을 대시보드용 지표명으로 변환
+        # ----------------------------------------------------
+        motie_metrics = {
+            "production": "VEHICLE_PRODUCTION_TOTAL",
+            "domestic": "VEHICLE_DOMESTIC_TOTAL",
+            "export": "VEHICLE_EXPORT_TOTAL",
+        }
+
+        # ----------------------------------------------------
+        # [1-3] 월별 데이터를 시장 MART 형식으로 저장
+        # ----------------------------------------------------
+        for source_col, metric_name in motie_metrics.items():
+
+            for _, motie_row in motie.iterrows():
+                value = motie_row.get(source_col)
+
+                # 값이 없는 월은 만들어내지 않고 건너뜁니다.
+                if pd.isna(value):
+                    continue
+
+                rows.append(
+                    {
+                        "period": motie_row["period"],
+                        "market_scope": "KOREA",
+                        "metric": metric_name,
+                        "value": float(value),
+                        "unit": "EA",
+                        "source_id": motie_row.get(
+                            "source_file",
+                            "motie_monthly_master.csv",
+                        ),
+                        "source_key": "motie",
+                        "estimate_flag": "ACTUAL",
+                        "confidence_grade": "",
+                        "model_version": "",
+                    }
+                )
+
+    # KOSIS 자동차 생산량을 시장 기준 데이터로 변환
+    for _, row in production.iterrows():
+        year = row.get("year")
+        qty = row.get("production_qty")
+
+        if pd.isna(year):
+            continue
+
+        country_code = str(row.get("country_code", ""))
+        category = str(row.get("vehicle_category", ""))
+
+        # ====================================================
+        # [2] KOSIS 기존 데이터의 사용 범위
+        # ====================================================
+        # GLOBAL:
+        #   기존 KOSIS 연간 자동차 생산 데이터를 계속 사용합니다.
+        #
+        # KOREA:
+        #   위에서 MOTIE 월별 MASTER를 새로 연결했으므로
+        #   기존 KOSIS 한국 연간 데이터는 넣지 않습니다.
+        #
+        # 이유:
+        #   KOSIS 한국 연간값 + MOTIE 한국 월별값이
+        #   동시에 들어가는 중복을 방지하기 위해서입니다.
+        # ====================================================
+
+        if country_code == "0":
+            scope = "GLOBAL"
+
+        elif country_code == "1005":
+            continue
+
+        else:
+            continue
+        
+        rows.append(
+            {
+                "period": f"{int(year)}-12",
+                "market_scope": scope,
+                "metric": f"VEHICLE_PRODUCTION_{category}",
+                "value": (
+                    float(qty)
+                    if not pd.isna(qty)
+                    else pd.NA
+                ),
+                "unit": "EA",
+                "source_id": row.get("source_id"),
+                "source_key": "kosis",
+                "estimate_flag": row.get(
+                    "estimate_flag",
+                    "ACTUAL",
+                ),
+                "confidence_grade": "",
+                "model_version": "",
+            }
+        )
+
+    # 제품/당사 공급 기준은 Master를 단일 원본으로 사용
+    assumptions = load_market_assumption_master()
+
+    metric_map = {
+        "coils_per_system": "COILS_PER_SYSTEM",
+        "company_iv_per_system": "COMPANY_IV_PER_SYSTEM",
+        "company_ov_per_system": "COMPANY_OV_PER_SYSTEM",
+        "company_hsv_per_system": "COMPANY_HSV_PER_SYSTEM",
+    }
+
+    model_rows = []
+
+    for _, row in assumptions.iterrows():
+        model_id = row.get("model_id")
+        parameter_name = row.get("parameter_name")
+
+        if pd.isna(model_id) or parameter_name not in metric_map:
+            continue
+
+        value = pd.to_numeric(
+            row.get("parameter_value"),
+            errors="coerce",
+        )
+
+        model_rows.append(
+            {
+                "period": "2026-09",
+                "market_scope": str(model_id),
+                "metric": metric_map[parameter_name],
+                "value": value if not pd.isna(value) else pd.NA,
+                "unit": row.get("unit"),
+                "source_id": row.get("source_id"),
+                "source_key": "market_assumption_master",
+                "estimate_flag": row.get("estimate_flag"),
+                "confidence_grade": row.get("confidence_grade"),
+                "model_version": row.get("model_version"),
+            }
+        )
+
+    rows.extend(model_rows)
+
+    mart = pd.DataFrame(rows)
+
+    for column in MARKET_MONTHLY_COLUMNS:
+        if column not in mart.columns:
+            mart[column] = pd.NA
+
+    mart = mart[MARKET_MONTHLY_COLUMNS]
+
+    return mart
+
+
+def save_market_mart() -> dict:
+    mart = build_market_mart()
+
+    OUTPUT_PATH.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    mart.to_parquet(
+        OUTPUT_PATH,
+        index=False,
+    )
+
+    return {
+        "output_file": str(OUTPUT_PATH),
+        "row_count": len(mart),
+        "actual_count": int(
+            (mart["estimate_flag"] == "ACTUAL").sum()
+        ),
+        "estimated_count": int(
+            (mart["estimate_flag"] == "ESTIMATED").sum()
+        ),
+    }
+
+
+if __name__ == "__main__":
+    result = save_market_mart()
+
+    print("Market mart build completed")
+    print("OUTPUT_FILE:", result["output_file"])
+    print("ROW_COUNT:", result["row_count"])
+    print("ACTUAL:", result["actual_count"])
+    print("ESTIMATED:", result["estimated_count"])
+
+
+
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: processors/technology_signal_mart.py
+EXISTS: True
+LINES: 114
+﻿from pathlib import Path
+
+import pandas as pd
+
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
+SOURCE_PATH = (
+    BASE_DIR
+    / "data"
+    / "metadata"
+    / "technology_signal_master.csv"
+)
+
+OUTPUT_PATH = (
+    BASE_DIR
+    / "data"
+    / "mart"
+    / "technology_signal.parquet"
+)
+
+
+COLUMNS = [
+    "signal_id",
+    "signal_date",
+    "technology_id",
+    "signal_type",
+    "company",
+    "event",
+    "vehicle_volume",
+    "forecast_year",
+    "forecast_value",
+    "unit",
+    "region",
+    "source_id",
+    "confidence_grade",
+    "verification_status",
+    "notes",
+]
+
+
+def build_technology_signal_mart() -> pd.DataFrame:
+    if not SOURCE_PATH.exists():
+        return pd.DataFrame(columns=COLUMNS)
+
+    df = pd.read_csv(
+        SOURCE_PATH,
+        dtype="string",
+    )
+
+    for column in COLUMNS:
+        if column not in df.columns:
+            df[column] = pd.NA
+
+    df = df[COLUMNS].copy()
+
+    df["forecast_value"] = pd.to_numeric(
+        df["forecast_value"],
+        errors="coerce",
+    )
+
+    df["forecast_year"] = pd.to_numeric(
+        df["forecast_year"],
+        errors="coerce",
+    ).astype("Int64")
+
+    # signal_date가 YYYY 형식이어도 정렬 가능하도록 보조 연도 생성
+    df["signal_year"] = pd.to_numeric(
+        df["signal_date"].str[:4],
+        errors="coerce",
+    ).astype("Int64")
+
+    df = df.sort_values(
+        ["signal_year", "company", "signal_type"],
+        ascending=[False, True, True],
+        kind="stable",
+    ).reset_index(drop=True)
+
+    return df
+
+
+def save_technology_signal_mart() -> dict:
+    df = build_technology_signal_mart()
+
+    OUTPUT_PATH.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    df.to_parquet(
+        OUTPUT_PATH,
+        index=False,
+    )
+
+    return {
+        "output_file": str(OUTPUT_PATH),
+        "row_count": len(df),
+        "verified_count": int(
+            (df["verification_status"] == "VERIFIED").sum()
+        ),
+        "forecast_count": int(
+            (df["signal_type"] == "FORECAST").sum()
+        ),
+    }
+
+
+if __name__ == "__main__":
+    result = save_technology_signal_mart()
+
+    print("Technology signal mart build completed")
+    print("OUTPUT_FILE:", result["output_file"])
+    print("ROW_COUNT:", result["row_count"])
+    print("VERIFIED:", result["verified_count"])
+    print("FORECAST:", result["forecast_count"])
+
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: collectors/technical_source_collector.py
+EXISTS: True
+LINES: 152
+from __future__ import annotations
+
+import hashlib
+import mimetypes
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urlparse
+
+import pandas as pd
+import requests
+
+from config.settings import PATH_CONFIG
+from config.sources import SOURCES
+
+
+RAW_DIR = Path(PATH_CONFIG["raw"]) / "technical"
+SOURCE_LOG_PATH = Path(PATH_CONFIG["metadata"]) / "source_log.csv"
+
+
+def _safe_filename(text: str) -> str:
+    allowed = (
+        "-_.() "
+        "abcdefghijklmnopqrstuvwxyz"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "0123456789"
+    )
+    cleaned = "".join(
+        c if c in allowed else "_" for c in text
+    )
+    cleaned = "_".join(cleaned.split())
+    return cleaned.strip("_") or "technical_source"
+
+
+def _guess_extension(
+    url: str,
+    content_type: str | None,
+) -> str:
+    suffix = Path(urlparse(url).path).suffix.lower()
+
+    if suffix and len(suffix) <= 6:
+        return suffix
+
+    if content_type:
+        mime = content_type.split(";")[0].strip()
+        guessed = mimetypes.guess_extension(mime)
+        if guessed:
+            return guessed
+
+    return ".html"
+
+
+def _sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def collect_technical_source(
+    url: str,
+    title: str,
+    notes: str = "",
+) -> dict:
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+    response = requests.get(
+        url,
+        timeout=60,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 ABS-Market-Intelligence "
+                "technical-source-collector"
+            )
+        },
+    )
+    response.raise_for_status()
+
+    collected_at = datetime.now()
+    timestamp = collected_at.strftime("%Y%m%d%H%M%S")
+
+    extension = _guess_extension(
+        url,
+        response.headers.get("Content-Type"),
+    )
+
+    filename = (
+        f"{timestamp}_{_safe_filename(title)}"
+        f"{extension}"
+    )
+
+    raw_path = RAW_DIR / filename
+    raw_path.write_bytes(response.content)
+
+    digest = _sha256(response.content)
+    source_id = f"TECH_{timestamp}"
+
+    source_info = SOURCES.get(
+        "technical",
+        {
+            "name": "공개 기술자료 / 제조사 공식자료",
+        },
+    )
+
+    log_row = {
+        "source_id": source_id,
+        "source_key": "technical",
+        "source_name": source_info["name"],
+        "basis_date": "",
+        "collected_at": collected_at.isoformat(
+            timespec="seconds"
+        ),
+        "source_url": url,
+        "raw_file_path": str(raw_path),
+        "sha256": digest,
+        "status": "SUCCESS",
+        "notes": notes or title,
+    }
+
+    if SOURCE_LOG_PATH.exists():
+        log_df = pd.read_csv(
+            SOURCE_LOG_PATH,
+            dtype="string",
+        )
+    else:
+        log_df = pd.DataFrame(
+            columns=list(log_row.keys())
+        )
+
+    log_df = pd.concat(
+        [
+            log_df,
+            pd.DataFrame([log_row]),
+        ],
+        ignore_index=True,
+    )
+
+    log_df.to_csv(
+        SOURCE_LOG_PATH,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    return {
+        "source_id": source_id,
+        "raw_file": str(raw_path),
+        "sha256": digest,
+        "bytes": len(response.content),
+        "content_type": response.headers.get(
+            "Content-Type"
+        ),
+    }
+
+
+if __name__ == "__main__":
+    print("technical_source_collector 준비 완료")
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: config/sources.py
+EXISTS: True
+LINES: 68
+from datetime import date
+
+SOURCES = {
+    "trade": {
+        "name": "관세청 수출입무역통계",
+        "url": "https://unipass.customs.go.kr/ets/",
+        "cost": "무료",
+        "api_key_req": True,
+        "update_cycle": "월",
+        "raw_retention": True,
+    },
+    "dart": {
+        "name": "금융감독원 DART 전자공시시스템",
+        "url": "https://dart.fss.or.kr/",
+        "cost": "무료",
+        "api_key_req": True,
+        "update_cycle": "분기/연",
+        "raw_retention": True,
+    },
+    "kama": {
+        "name": "한국자동차모빌리티산업협회",
+        "url": "https://www.kama.or.kr/statistics/",
+        "cost": "무료 공개 범위 사용",
+        "api_key_req": False,
+        "update_cycle": "월",
+        "raw_retention": True,
+    },
+    "kipris": {
+        "name": "KIPRIS 특허정보검색",
+        "url": "https://www.kipris.or.kr/",
+        "cost": "무료",
+        "api_key_req": True,
+        "update_cycle": "분기 권장",
+        "raw_retention": True,
+    },
+    "bok": {
+        "name": "한국은행 ECOS",
+        "url": "https://ecos.bok.or.kr/",
+        "cost": "무료",
+        "api_key_req": True,
+        "update_cycle": "월",
+        "raw_retention": True,
+    },
+    "kosis": {
+        "name": "국가통계포털 KOSIS",
+        "url": "https://kosis.kr/",
+        "cost": "무료",
+        "api_key_req": True,
+        "update_cycle": "통계별 상이",
+        "raw_retention": True,
+    },
+    "technical": {
+        "name": "공개 기술자료 / 제조사 공식자료",
+        "url": "",
+        "cost": "무료 공개자료만 사용",
+        "api_key_req": False,
+        "update_cycle": "수시",
+        "raw_retention": True,
+    },
+}
+
+def get_source_citation(source_key: str, basis_date: str | None = None) -> str:
+    s = SOURCES.get(source_key, {})
+    basis = f" | 기준: {basis_date}" if basis_date else ""
+    return (
+        f"출처: {s.get('name','알수없음')} ({s.get('url','')})"
+        f"{basis} | 수집일: {date.today()}"
+    )
+
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: config/settings.py
+EXISTS: True
+LINES: 41
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
+DATE_CONFIG = {
+    "raw_start_year": 2010,
+    "analysis_start_year": 2015,
+    "recent_years": 5,
+    "freq": "M",
+}
+
+API_CONFIG = {
+    "dart_key": os.getenv("DART_API_KEY"),
+    "trade_key": os.getenv("TRADE_API_KEY"),
+    "kipris_key": os.getenv("KIPRIS_API_KEY"),
+    "bok_key": os.getenv("BOK_API_KEY"),
+    "kosis_key": os.getenv("KOSIS_API_KEY"),
+}
+
+PATH_CONFIG = {
+    "raw": BASE_DIR / "data" / "raw",
+    "processed": BASE_DIR / "data" / "processed",
+    "mart": BASE_DIR / "data" / "mart",
+    "cache": BASE_DIR / "data" / "cache",
+    "metadata": BASE_DIR / "data" / "metadata",
+    "reports": BASE_DIR / "reports" / "figures",
+}
+
+DASHBOARD_CONFIG = {
+    "service_name_ko": "시장동향",
+    "service_name_en": "ABS Market Intelligence",
+    "default_view": "글로벌 시장",
+    "views": ["글로벌 시장", "국내 시장", "한국기업 글로벌", "우리회사 비교분석"],
+    "show_model_version": True,
+    "show_source_date": True,
+    "show_confidence_grade": True,
+}
+
+
+====================================================================================================
+CODE
+====================================================================================================
+FILE: dashboard/app.py
+EXISTS: True
+LINES: 1194
+﻿from pathlib import Path
+from datetime import datetime
+
+import altair as alt
+import pandas as pd
+import streamlit as st
+
+
+# ============================================================
+# [기본 경로]
+# - 기존 데이터 수집/검증 로직은 건드리지 않습니다.
+# - 이미 만들어진 MART만 읽어서 화면에 표시합니다.
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+MARKET_MART = BASE_DIR / "data" / "mart" / "market_monthly.parquet"
+SIGNAL_MART = BASE_DIR / "data" / "mart" / "technology_signal.parquet"
+SOURCE_LOG = BASE_DIR / "data" / "metadata" / "source_log.csv"
+
+
+# ============================================================
+# [페이지 설정]
+# ============================================================
+
+st.set_page_config(
+    page_title="자동차 시장 변화 분석",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
+
+# ============================================================
+# [화면 디자인]
+# - 한 화면에 정보가 들어오도록 여백/글자/카드를 작게 조정합니다.
+# - 불필요한 큰 박스와 긴 설명은 줄였습니다.
+# ============================================================
+
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-top: 0.8rem;
+        padding-bottom: 1.2rem;
+        max-width: 1600px;
+    }
+
+    header[data-testid="stHeader"] {
+        background: rgba(255,255,255,0);
+    }
+
+    .main-title {
+        font-size: 1.72rem;
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        color: #172033;
+        margin-bottom: 0.08rem;
+    }
+
+    .main-sub {
+        color: #6b7280;
+        font-size: 0.88rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+        font-size: 1.02rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        color: #172033;
+        margin: 0 0 0.1rem 0;
+    }
+
+    .section-sub {
+        color: #7b8495;
+        font-size: 0.77rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .mini-note {
+        color: #7b8495;
+        font-size: 0.72rem;
+        line-height: 1.45;
+    }
+
+    [data-testid="stMetric"] {
+        background: #ffffff;
+        border: 1px solid #edf0f4;
+        border-radius: 12px;
+        padding: 0.58rem 0.72rem;
+        box-shadow: 0 1px 3px rgba(16,24,40,.025);
+    }
+
+    [data-testid="stMetricLabel"] {
+        font-size: 0.72rem;
+        color: #697386;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.18rem;
+        font-weight: 750;
+    }
+
+    [data-testid="stMetricDelta"] {
+        font-size: 0.70rem;
+    }
+
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        border-color: #edf0f4;
+        border-radius: 14px;
+        background: #ffffff;
+    }
+
+    .insight-box {
+        border-left: 3px solid #5b6f95;
+        background: #f8fafc;
+        padding: 0.58rem 0.72rem;
+        border-radius: 0 10px 10px 0;
+        font-size: 0.80rem;
+        line-height: 1.48;
+        margin-bottom: 0.35rem;
+    }
+
+    .tech-flow {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+        gap: 7px;
+        align-items: center;
+        margin: 0.35rem 0 0.45rem 0;
+    }
+
+    .tech-node {
+        background: #f8fafc;
+        border: 1px solid #e7ebf0;
+        border-radius: 11px;
+        padding: 0.62rem 0.45rem;
+        text-align: center;
+        min-height: 66px;
+    }
+
+    .tech-node strong {
+        display: block;
+        color: #172033;
+        font-size: 0.86rem;
+    }
+
+    .tech-node span {
+        color: #7b8495;
+        font-size: 0.69rem;
+    }
+
+    .tech-arrow {
+        color: #a1a8b5;
+        font-weight: 800;
+    }
+
+    .source-card {
+        background: #fbfcfe;
+        border: 1px solid #edf0f4;
+        border-radius: 10px;
+        padding: 0.55rem 0.65rem;
+        min-height: 78px;
+        font-size: 0.76rem;
+    }
+
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 6px;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        height: 38px;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 0.86rem;
+        font-weight: 700;
+    }
+
+    div[data-testid="stRadio"] label {
+        font-size: 0.76rem;
+    }
+
+    @media (max-width: 900px) {
+        .block-container {
+            padding-left: 0.7rem;
+            padding-right: 0.7rem;
+        }
+        .tech-flow {
+            grid-template-columns: 1fr;
+        }
+        .tech-arrow {
+            text-align: center;
+            transform: rotate(90deg);
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+# ============================================================
+# [데이터 불러오기]
+# ============================================================
+
+@st.cache_data
+def load_market():
+    if not MARKET_MART.exists():
+        return pd.DataFrame()
+    return pd.read_parquet(MARKET_MART)
+
+
+@st.cache_data
+def load_signals():
+    if not SIGNAL_MART.exists():
+        return pd.DataFrame()
+    return pd.read_parquet(SIGNAL_MART)
+
+
+@st.cache_data
+def load_source_log():
+    if not SOURCE_LOG.exists():
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(SOURCE_LOG, dtype="string")
+    except Exception:
+        return pd.DataFrame()
+
+
+market = load_market()
+signals = load_signals()
+source_log = load_source_log()
+
+
+# ============================================================
+# [시장 데이터 공통 함수]
+# ============================================================
+
+METRIC_CANDIDATES = {
+    "생산": [
+        "VEHICLE_PRODUCTION_TOTAL",
+    ],
+    "내수": [
+        "VEHICLE_DOMESTIC_TOTAL",
+        "VEHICLE_DOMESTIC_SALES_TOTAL",
+        "DOMESTIC_SALES_TOTAL",
+        "VEHICLE_SALES_DOMESTIC_TOTAL",
+    ],
+    "수출": [
+        "VEHICLE_EXPORT_TOTAL",
+        "EXPORT_TOTAL",
+        "VEHICLE_SALES_EXPORT_TOTAL",
+    ],
+}
+
+
+def find_metric(label, scope="KOREA"):
+    """현재 MART에 실제로 존재하는 metric 이름을 자동으로 찾습니다."""
+    if market.empty or "metric" not in market.columns:
+        return None
+
+    view = market.copy()
+
+    if "market_scope" in view.columns:
+        view = view[
+            view["market_scope"].astype(str).str.upper()
+            == str(scope).upper()
+        ]
+
+    available = set(view["metric"].astype(str))
+
+    for candidate in METRIC_CANDIDATES[label]:
+        if candidate in available:
+            return candidate
+
+    keyword = {
+        "생산": "PRODUCTION",
+        "내수": "DOMESTIC",
+        "수출": "EXPORT",
+    }[label]
+
+    matches = [
+        x for x in available
+        if keyword in x.upper() and "TOTAL" in x.upper()
+    ]
+
+    return sorted(matches)[0] if matches else None
+
+
+def monthly_series(label, scope="KOREA"):
+    """생산/내수/수출 월별 실제값을 반환합니다."""
+    metric = find_metric(label, scope)
+
+    if metric is None or market.empty:
+        return pd.DataFrame()
+
+    df = market[
+        (market["market_scope"].astype(str).str.upper() == scope.upper())
+        & (market["metric"].astype(str) == metric)
+    ].copy()
+
+    if df.empty:
+        return df
+
+    df["date"] = pd.to_datetime(
+        df["period"].astype(str),
+        format="%Y-%m",
+        errors="coerce",
+    )
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+
+    df = (
+        df.dropna(subset=["date", "value"])
+        .sort_values("date")
+        .drop_duplicates(subset=["date"], keep="last")
+        .reset_index(drop=True)
+    )
+
+    df["series"] = label
+    return df[["date", "value", "series"]]
+
+
+def calendar_features(df):
+    """
+    달력 기준 시계열 분석.
+    없는 월은 임의로 채우지 않습니다.
+    """
+    if df.empty:
+        return pd.DataFrame()
+
+    x = (
+        df[["date", "value"]]
+        .drop_duplicates("date", keep="last")
+        .set_index("date")
+        .sort_index()
+    )
+
+    full = pd.date_range(x.index.min(), x.index.max(), freq="MS")
+    x = x.reindex(full)
+    x.index.name = "date"
+
+    x["mom_pct"] = x["value"].pct_change(1, fill_method=None) * 100
+    x["yoy_pct"] = x["value"].pct_change(12, fill_method=None) * 100
+    x["ma3"] = x["value"].rolling(3, min_periods=3).mean()
+    x["std12"] = x["value"].rolling(12, min_periods=12).std()
+    x["missing"] = x["value"].isna()
+
+    return x.reset_index()
+
+
+def latest_actual(df):
+    if df.empty:
+        return None
+    x = df.dropna(subset=["value"]).sort_values("date")
+    return None if x.empty else x.iloc[-1]
+
+
+def period_start_date(mode, latest_date):
+    if mode == "최근 3년":
+        return latest_date - pd.DateOffset(years=3) + pd.DateOffset(months=1)
+    if mode == "최근 5년":
+        return latest_date - pd.DateOffset(years=5) + pd.DateOffset(months=1)
+    if mode == "최근 10년":
+        return latest_date - pd.DateOffset(years=10) + pd.DateOffset(months=1)
+    return pd.Timestamp("1900-01-01")
+
+
+def fmt_count(v):
+    if v is None or pd.isna(v):
+        return "-"
+    return f"{v:,.0f}대"
+
+
+def fmt_pct(v):
+    if v is None or pd.isna(v):
+        return "-"
+    return f"{v:+.1f}%"
+
+
+def safe_yoy(df):
+    """최신월과 정확히 12개월 전을 비교합니다."""
+    f = calendar_features(df)
+    if f.empty:
+        return None
+    actual = f.dropna(subset=["value"])
+    if actual.empty:
+        return None
+    return actual.iloc[-1]["yoy_pct"]
+
+
+def annual_total(df, year):
+    if df.empty:
+        return None
+    x = df[df["date"].dt.year == year]["value"]
+    if x.empty:
+        return None
+    return float(x.sum())
+
+
+def annual_change(df, year):
+    now = annual_total(df, year)
+    prev = annual_total(df, year - 1)
+    if now is None or prev in (None, 0):
+        return None
+    return (now / prev - 1) * 100
+
+
+# ============================================================
+# [차트 1] 생산·내수·수출을 한 그래프에 표시
+# ============================================================
+
+def market_change_chart(period_mode):
+    frames = [
+        monthly_series("생산"),
+        monthly_series("내수"),
+        monthly_series("수출"),
+    ]
+    frames = [x for x in frames if not x.empty]
+
+    if not frames:
+        st.warning("월별 생산·내수·수출 데이터를 찾지 못했습니다.")
+        return
+
+    df = pd.concat(frames, ignore_index=True)
+    latest_date = df["date"].max()
+    start = period_start_date(period_mode, latest_date)
+    df = df[df["date"] >= start].copy()
+
+    # 월별 점에 접근하면 세 지표의 숫자를 한 번에 보기 위한 피벗
+    pivot = (
+        df.pivot_table(
+            index="date",
+            columns="series",
+            values="value",
+            aggfunc="last",
+        )
+        .reset_index()
+    )
+
+    # 선은 3개를 한 그래프에 겹쳐서 표현
+    line = (
+        alt.Chart(df)
+        .mark_line(point=alt.OverlayMarkDef(size=22, filled=True))
+        .encode(
+            x=alt.X(
+                "date:T",
+                title=None,
+                axis=alt.Axis(format="%Y-%m", labelAngle=0, tickCount=8),
+            ),
+            y=alt.Y(
+                "value:Q",
+                title="대수",
+                axis=alt.Axis(format="~s"),
+                scale=alt.Scale(zero=False),
+            ),
+            color=alt.Color(
+                "series:N",
+                title=None,
+                scale=alt.Scale(
+                    domain=["생산", "내수", "수출"],
+                    range=["#355C9A", "#2F8F83", "#D48645"],
+                ),
+            ),
+            tooltip=[
+                alt.Tooltip("date:T", title="월", format="%Y-%m"),
+                alt.Tooltip("series:N", title="구분"),
+                alt.Tooltip("value:Q", title="대수", format=",.0f"),
+            ],
+        )
+        .properties(height=315)
+        .interactive()
+    )
+
+    st.altair_chart(line, use_container_width=True)
+
+    # 최근 12개월 숫자는 그래프를 가리지 않도록 접어서 제공
+    with st.expander("최근 월별 숫자 보기", expanded=False):
+        table = pivot.sort_values("date", ascending=False).head(12).copy()
+        table["월"] = table["date"].dt.strftime("%Y-%m")
+        cols = ["월"] + [x for x in ["생산", "내수", "수출"] if x in table.columns]
+        st.dataframe(
+            table[cols],
+            hide_index=True,
+            use_container_width=True,
+            height=245,
+            column_config={
+                "생산": st.column_config.NumberColumn(format="%,.0f"),
+                "내수": st.column_config.NumberColumn(format="%,.0f"),
+                "수출": st.column_config.NumberColumn(format="%,.0f"),
+            },
+        )
+
+
+# ============================================================
+# [차트 2] 지금 시장은?
+# ============================================================
+
+def current_market_chart(compare_mode, selected_year):
+    rows = []
+
+    for label in ["생산", "내수", "수출"]:
+        df = monthly_series(label)
+        if df.empty:
+            continue
+
+        if compare_mode == "전년 대비":
+            # 선택 연도의 월별 합계와 전년 같은 기간을 비교
+            current = df[df["date"].dt.year == selected_year].copy()
+            previous = df[df["date"].dt.year == selected_year - 1].copy()
+
+            if current.empty:
+                continue
+
+            max_month = int(current["date"].dt.month.max())
+            previous = previous[previous["date"].dt.month <= max_month]
+
+            current_value = float(current["value"].sum())
+            previous_value = (
+                float(previous["value"].sum())
+                if not previous.empty
+                else None
+            )
+
+            change = (
+                (current_value / previous_value - 1) * 100
+                if previous_value not in (None, 0)
+                else None
+            )
+
+            rows.append({
+                "구분": label,
+                "값": current_value,
+                "증감률": change,
+                "비교": f"{selected_year}년 1~{max_month}월",
+            })
+
+        else:
+            value = annual_total(df, selected_year)
+            if value is None:
+                continue
+            rows.append({
+                "구분": label,
+                "값": value,
+                "증감률": annual_change(df, selected_year),
+                "비교": f"{selected_year}년",
+            })
+
+    chart_df = pd.DataFrame(rows)
+
+    if chart_df.empty:
+        st.info("선택한 기간의 시장 데이터가 없습니다.")
+        return
+
+    bars = (
+        alt.Chart(chart_df)
+        .mark_bar(cornerRadiusTopLeft=5, cornerRadiusTopRight=5)
+        .encode(
+            x=alt.X("구분:N", title=None, sort=["생산", "내수", "수출"]),
+            y=alt.Y("값:Q", title="대수", axis=alt.Axis(format="~s")),
+            color=alt.Color(
+                "구분:N",
+                legend=None,
+                scale=alt.Scale(
+                    domain=["생산", "내수", "수출"],
+                    range=["#355C9A", "#2F8F83", "#D48645"],
+                ),
+            ),
+            tooltip=[
+                alt.Tooltip("구분:N", title="구분"),
+                alt.Tooltip("비교:N", title="기간"),
+                alt.Tooltip("값:Q", title="대수", format=",.0f"),
+                alt.Tooltip("증감률:Q", title="증감률", format="+.1f"),
+            ],
+        )
+        .properties(height=245)
+    )
+
+    st.altair_chart(bars, use_container_width=True)
+
+
+# ============================================================
+# [시장 구조]
+# - 회사 실제 점유율 근거가 아직 없으면 임의 숫자를 만들지 않습니다.
+# - 대신 기술 전환 구조를 시각화합니다.
+# ============================================================
+
+def render_market_structure(market_type):
+    st.markdown(
+        f'<div class="section-title">{market_type} 시장 구조</div>',
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="tech-flow">
+            <div class="tech-node"><strong>ABS</strong><span>성숙 기술</span></div>
+            <div class="tech-arrow">→</div>
+            <div class="tech-node"><strong>ESC</strong><span>주류 제어</span></div>
+            <div class="tech-arrow">→</div>
+            <div class="tech-node"><strong>통합제동</strong><span>성장·전환</span></div>
+            <div class="tech-arrow">→</div>
+            <div class="tech-node"><strong>신기술</strong><span>Brake-by-Wire</span></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.caption(
+        "※ 당사 실제 시장점유율은 내부 매출/출하와 시장모수의 동일 기준 연결 후 표시합니다. "
+        "근거 없는 점유율은 만들지 않습니다."
+    )
+
+
+# ============================================================
+# [상세 분석 차트]
+# ============================================================
+
+def detailed_trend_chart(selected_series, period_mode):
+    df = monthly_series(selected_series)
+
+    if df.empty:
+        st.info(f"{selected_series} 월별 데이터가 없습니다.")
+        return
+
+    f = calendar_features(df)
+    latest_date = f["date"].max()
+    start = period_start_date(period_mode, latest_date)
+    f = f[f["date"] >= start].copy()
+
+    plot = f[["date", "value", "ma3"]].rename(
+        columns={"value": "실제값", "ma3": "3개월 이동평균"}
+    )
+    plot = plot.melt(
+        id_vars=["date"],
+        var_name="구분",
+        value_name="값",
+    ).dropna(subset=["값"])
+
+    chart = (
+        alt.Chart(plot)
+        .mark_line()
+        .encode(
+            x=alt.X(
+                "date:T",
+                title=None,
+                axis=alt.Axis(format="%Y-%m", tickCount=7),
+            ),
+            y=alt.Y("값:Q", title="대수", scale=alt.Scale(zero=False)),
+            color=alt.Color(
+                "구분:N",
+                title=None,
+                scale=alt.Scale(
+                    domain=["실제값", "3개월 이동평균"],
+                    range=["#355C9A", "#D48645"],
+                ),
+            ),
+            strokeWidth=alt.condition(
+                alt.datum["구분"] == "실제값",
+                alt.value(2.4),
+                alt.value(2.0),
+            ),
+            tooltip=[
+                alt.Tooltip("date:T", title="월", format="%Y-%m"),
+                alt.Tooltip("구분:N", title="구분"),
+                alt.Tooltip("값:Q", title="대수", format=",.0f"),
+            ],
+        )
+        .properties(height=270)
+        .interactive()
+    )
+
+    st.altair_chart(chart, use_container_width=True)
+
+
+def volatility_chart(series_list, period_mode):
+    frames = []
+
+    for label in series_list:
+        df = monthly_series(label)
+        if df.empty:
+            continue
+
+        f = calendar_features(df)
+        f["구분"] = label
+        frames.append(f[["date", "std12", "구분"]])
+
+    if not frames:
+        st.info("변동성 데이터를 계산할 수 없습니다.")
+        return
+
+    x = pd.concat(frames, ignore_index=True)
+    latest_date = x["date"].max()
+    start = period_start_date(period_mode, latest_date)
+    x = x[(x["date"] >= start) & x["std12"].notna()].copy()
+
+    if x.empty:
+        st.info("선택 기간에는 12개월 변동성 계산값이 없습니다.")
+        return
+
+    chart = (
+        alt.Chart(x)
+        .mark_line()
+        .encode(
+            x=alt.X(
+                "date:T",
+                title=None,
+                axis=alt.Axis(format="%Y-%m", tickCount=7),
+            ),
+            y=alt.Y(
+                "std12:Q",
+                title="12개월 표준편차",
+                scale=alt.Scale(zero=False),
+            ),
+            color=alt.Color(
+                "구분:N",
+                title=None,
+                scale=alt.Scale(
+                    domain=["내수", "수출"],
+                    range=["#2F8F83", "#D48645"],
+                ),
+            ),
+            tooltip=[
+                alt.Tooltip("date:T", title="월", format="%Y-%m"),
+                alt.Tooltip("구분:N", title="구분"),
+                alt.Tooltip("std12:Q", title="변동성", format=",.0f"),
+            ],
+        )
+        .properties(height=270)
+        .interactive()
+    )
+
+    st.altair_chart(chart, use_container_width=True)
+
+
+# ============================================================
+# [질문 → 관찰 → 해석 → 기회]
+# ============================================================
+
+def insight_for_question(question):
+    domestic = monthly_series("내수")
+    export = monthly_series("수출")
+
+    if question == "최근 내수 흐름은 어떻게 변했나?":
+        df = domestic
+        subject = "내수"
+    elif question == "수출 변동성이 커진 시점은 언제인가?":
+        df = export
+        subject = "수출"
+    else:
+        df = export if not export.empty else domestic
+        subject = "시장"
+
+    if df.empty:
+        return (
+            "계산 가능한 데이터가 없습니다.",
+            "현재 자료만으로 해석하기 어렵습니다.",
+            "시장 데이터 연결 상태를 먼저 확인합니다.",
+        )
+
+    f = calendar_features(df)
+    actual = f.dropna(subset=["value"]).sort_values("date")
+
+    latest = actual.iloc[-1]
+    yoy_value = latest["yoy_pct"]
+
+    if question == "수출 변동성이 커진 시점은 언제인가?":
+        vol = f.dropna(subset=["std12"])
+        if not vol.empty:
+            peak = vol.loc[vol["std12"].idxmax()]
+            fact = (
+                f"{peak['date']:%Y-%m}에 12개월 변동성이 "
+                f"{peak['std12']:,.0f}대로 가장 크게 나타났습니다."
+            )
+        else:
+            fact = "연속 12개월 자료가 부족해 변동성 최대시점을 계산할 수 없습니다."
+
+        why = (
+            "변동성 확대는 시장 방향 자체보다 월별 충격이 커졌다는 신호입니다. "
+            "당시 수출지역·생산차질·외부 사건과 함께 확인해야 합니다."
+        )
+        action = (
+            "수출 변동이 큰 구간과 기술전환 신호를 겹쳐 보고 "
+            "통합제동·신기술 적용시장 확대 여부를 추가 확인합니다."
+        )
+        return fact, why, action
+
+    fact = (
+        f"최근 {subject}은 {latest['date']:%Y-%m} "
+        f"{latest['value']:,.0f}대이며, "
+        f"전년 동월 대비 {fmt_pct(yoy_value)}입니다."
+    )
+
+    if pd.isna(yoy_value):
+        why = "비교 기준월 데이터가 없어 전년 동월 변화만으로 방향을 단정하지 않습니다."
+    elif yoy_value >= 0:
+        why = "최근 값은 전년 동월보다 높습니다. 회복이 일시적인지 추세적인지는 이동평균과 함께 봐야 합니다."
+    else:
+        why = "최근 값은 전년 동월보다 낮습니다. 계절성·조업일수·수요 변화 등 외부 요인 확인이 필요합니다."
+
+    action = (
+        "전체 자동차 수량만 보지 않고 ABS → ESC → 통합제동 → "
+        "Brake-by-Wire 전환과 연결해 당사 접근 가능 시장을 확인합니다."
+    )
+
+    return fact, why, action
+
+
+# ============================================================
+# [기술 신호 / 근거]
+# ============================================================
+
+def render_technology_evidence():
+    if signals.empty:
+        st.info("등록된 기술 신호가 없습니다.")
+        return
+
+    view = signals.copy()
+
+    sort_cols = [
+        c for c in ["signal_year", "company"]
+        if c in view.columns
+    ]
+    if sort_cols:
+        view = view.sort_values(
+            sort_cols,
+            ascending=[False] * len(sort_cols),
+        )
+
+    view = view.head(4)
+
+    cols = st.columns(2)
+
+    for i, (_, row) in enumerate(view.iterrows()):
+        with cols[i % 2]:
+            company = str(row.get("company", "기술자료"))
+            year = row.get("signal_year", "")
+            event = str(row.get("event", "")).strip()
+            status = str(row.get("verification_status", "")).strip()
+            source_url = row.get("source_url", None)
+
+            st.markdown(
+                f"""
+                <div class="source-card">
+                    <strong>{company}</strong>
+                    <span style="color:#8a93a3;"> · {year}</span><br>
+                    {event}
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            if status == "VERIFIED":
+                st.caption("공식자료 · 검증 완료")
+
+            if source_url is not None and str(source_url).startswith("http"):
+                st.link_button(
+                    "근거자료 보기 ↗",
+                    str(source_url),
+                    use_container_width=True,
+                )
+
+
+# ============================================================
+# HEADER
+# ============================================================
+
+all_monthly = [
+    monthly_series("생산"),
+    monthly_series("내수"),
+    monthly_series("수출"),
+]
+all_monthly = [x for x in all_monthly if not x.empty]
+
+if all_monthly:
+    latest_market_date = max(x["date"].max() for x in all_monthly)
+    first_market_date = min(x["date"].min() for x in all_monthly)
+else:
+    latest_market_date = pd.NaT
+    first_market_date = pd.NaT
+
+st.markdown(
+    '<div class="main-title">자동차 시장 변화 분석</div>',
+    unsafe_allow_html=True,
+)
+
+if pd.notna(latest_market_date):
+    subtitle = (
+        f"{first_market_date:%Y-%m} ~ {latest_market_date:%Y-%m} · "
+        "월별 생산·내수·수출 흐름에서 시장 변화와 사업기회를 찾습니다."
+    )
+else:
+    subtitle = "월별 생산·내수·수출 흐름에서 시장 변화와 사업기회를 찾습니다."
+
+st.markdown(
+    f'<div class="main-sub">{subtitle}</div>',
+    unsafe_allow_html=True,
+)
+
+
+# ============================================================
+# 2개 화면
+# ============================================================
+
+page1, page2 = st.tabs(
+    ["① 시장 한눈에 보기", "② 상세 분석 · 우리의 기회"]
+)
+
+
+# ============================================================
+# PAGE 1
+# 1. 자동차시장 변화
+# 2. 지금 시장은?
+# ============================================================
+
+with page1:
+
+    left, right = st.columns([1.65, 1.0], gap="medium")
+
+    # --------------------------------------------------------
+    # ① 자동차시장 변화
+    # --------------------------------------------------------
+    with left:
+        with st.container(border=True):
+            title_col, period_col = st.columns([4.2, 1.35])
+
+            with title_col:
+                st.markdown(
+                    '<div class="section-title">자동차시장 변화</div>',
+                    unsafe_allow_html=True,
+                )
+                st.markdown(
+                    '<div class="section-sub">'
+                    '생산 · 내수 · 수출을 월별로 함께 비교합니다.'
+                    '</div>',
+                    unsafe_allow_html=True,
+                )
+
+            with period_col:
+                trend_period = st.selectbox(
+                    "기간",
+                    ["최근 3년", "최근 5년", "최근 10년", "전체"],
+                    index=2,
+                    key="trend_period",
+                    label_visibility="collapsed",
+                )
+
+            market_change_chart(trend_period)
+
+    # --------------------------------------------------------
+    # ② 지금 시장은?
+    # --------------------------------------------------------
+    with right:
+        with st.container(border=True):
+            st.markdown(
+                '<div class="section-title">지금 시장은?</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div class="section-sub">'
+                '선택 기간의 생산 · 내수 · 수출 규모와 전년 변화를 봅니다.'
+                '</div>',
+                unsafe_allow_html=True,
+            )
+
+            c_mode, c_year = st.columns([1.1, 1.0])
+
+            with c_mode:
+                compare_mode = st.radio(
+                    "비교 방식",
+                    ["전년 대비", "연간"],
+                    horizontal=True,
+                    key="compare_mode",
+                    label_visibility="collapsed",
+                )
+
+            years = []
+            for x in all_monthly:
+                years.extend(x["date"].dt.year.tolist())
+
+            years = sorted(set(years), reverse=True)
+
+            with c_year:
+                selected_year = st.selectbox(
+                    "연도",
+                    years if years else [datetime.now().year],
+                    index=0,
+                    key="current_year",
+                    label_visibility="collapsed",
+                )
+
+            current_market_chart(compare_mode, selected_year)
+
+            # 내수/수출 선택에 따라 시장 구조 전환
+            focus_market = st.segmented_control(
+                "시장 선택",
+                ["내수", "수출"],
+                default="내수",
+                key="focus_market",
+                label_visibility="collapsed",
+            )
+
+            if focus_market is None:
+                focus_market = "내수"
+
+            render_market_structure(focus_market)
+
+    # 최신값은 그래프 아래 아주 작게 요약
+    latest_cols = st.columns(4)
+
+    for col, label in zip(
+        latest_cols[:3],
+        ["생산", "내수", "수출"],
+    ):
+        df = monthly_series(label)
+        row = latest_actual(df)
+
+        with col:
+            if row is not None:
+                st.metric(
+                    f"최근 {label}",
+                    fmt_count(row["value"]),
+                    delta=f"{row['date']:%Y-%m} · YoY {fmt_pct(safe_yoy(df))}",
+                    delta_color="off",
+                )
+            else:
+                st.metric(f"최근 {label}", "-")
+
+    with latest_cols[3]:
+        # 결측월은 생산 기준으로 표시
+        prod = monthly_series("생산")
+        f = calendar_features(prod)
+        missing = int(f["missing"].sum()) if not f.empty else 0
+
+        st.metric(
+            "데이터 공백",
+            f"{missing}개월",
+            delta="임의 보간 없음",
+            delta_color="off",
+        )
+
+
+# ============================================================
+# PAGE 2
+# 3. 상세분석
+# 4. 질문 → 해석 → 우리의 기회
+# ============================================================
+
+with page2:
+
+    top_left, top_right = st.columns(2, gap="medium")
+
+    # --------------------------------------------------------
+    # ③ 상세분석
+    # --------------------------------------------------------
+    with top_left:
+        with st.container(border=True):
+            head1, head2 = st.columns([2.4, 1.0])
+
+            with head1:
+                st.markdown(
+                    '<div class="section-title">내수 · 수출 상세 추이</div>',
+                    unsafe_allow_html=True,
+                )
+                detail_series = st.segmented_control(
+                    "지표",
+                    ["내수", "수출"],
+                    default="내수",
+                    key="detail_series",
+                    label_visibility="collapsed",
+                )
+
+            with head2:
+                detail_period = st.selectbox(
+                    "기간",
+                    ["최근 3년", "최근 5년", "최근 10년", "전체"],
+                    index=1,
+                    key="detail_period",
+                    label_visibility="collapsed",
+                )
+
+            if detail_series is None:
+                detail_series = "내수"
+
+            detailed_trend_chart(detail_series, detail_period)
+
+            st.caption(
+                "실제 월별값과 3개월 이동평균을 함께 표시합니다. "
+                "기술별 판매량은 근거 데이터 확보 전 임의로 분해하지 않습니다."
+            )
+
+    # --------------------------------------------------------
+    # 변동성
+    # --------------------------------------------------------
+    with top_right:
+        with st.container(border=True):
+            st.markdown(
+                '<div class="section-title">변동성 분석</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div class="section-sub">'
+                '12개월 표준편차로 시장 움직임이 커진 시점을 확인합니다.'
+                '</div>',
+                unsafe_allow_html=True,
+            )
+
+            volatility_target = st.multiselect(
+                "표시 지표",
+                ["내수", "수출"],
+                default=["내수", "수출"],
+                key="volatility_target",
+            )
+
+            volatility_chart(
+                volatility_target if volatility_target else ["내수", "수출"],
+                detail_period,
+            )
+
+    bottom_left, bottom_right = st.columns([1.15, 1.0], gap="medium")
+
+    # --------------------------------------------------------
+    # ④ 질문 → 관찰 → 해석 → 기회
+    # --------------------------------------------------------
+    with bottom_left:
+        with st.container(border=True):
+            st.markdown(
+                '<div class="section-title">그래서 무엇을 알고 싶은가?</div>',
+                unsafe_allow_html=True,
+            )
+
+            question = st.selectbox(
+                "분석 질문",
+                [
+                    "최근 내수 흐름은 어떻게 변했나?",
+                    "수출 변동성이 커진 시점은 언제인가?",
+                    "기술 전환에서 우리의 기회는 어디인가?",
+                ],
+                key="analysis_question",
+            )
+
+            fact, why, action = insight_for_question(question)
+
+            st.markdown(
+                f'<div class="insight-box"><b>관찰</b> · {fact}</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                f'<div class="insight-box"><b>해석</b> · {why}</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                f'<div class="insight-box"><b>기회</b> · {action}</div>',
+                unsafe_allow_html=True,
+            )
+
+            st.caption(
+                "※ 관찰은 계산된 데이터 사실이며, 해석과 기회는 "
+                "시장·기술 근거를 추가 확인해야 하는 분석 가설입니다."
+            )
+
+    # --------------------------------------------------------
+    # 신기술 대비 + 근거
+    # --------------------------------------------------------
+    with bottom_right:
+        with st.container(border=True):
+            st.markdown(
+                '<div class="section-title">신기술 대비 · 시장 근거</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                """
+                <div class="tech-flow">
+                    <div class="tech-node"><strong>ABS</strong><span>MGH20</span></div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-node"><strong>ESC</strong><span>MEB5</span></div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-node"><strong>통합제동</strong><span>MEB5.2 · iMEB3</span></div>
+                    <div class="tech-arrow">→</div>
+                    <div class="tech-node"><strong>Brake-by-Wire</strong><span>차세대 기술</span></div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            render_technology_evidence()
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+
+st.caption(
+    "분석 원칙 · 결측월 임의 보간 없음 · 실제값/추정값 구분 · "
+    "시장점유율은 계산 근거 확보 후 표시"
+)

@@ -1,0 +1,3 @@
+﻿metric,vehicle_scope,start,end,calendar_months,observed_months,null_pct
+DOMESTIC_SALES,PASSENGER_VEHICLES,2025-12-01,2026-08-01,9,9,0.0
+PRODUCTION,PV_3W_2W_QUAD_TOTAL,2025-12-01,2026-08-01,9,9,0.0

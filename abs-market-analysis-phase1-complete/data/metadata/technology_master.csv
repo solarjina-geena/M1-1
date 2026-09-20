@@ -1,0 +1,9 @@
+﻿technology_id,technology_group,technology_name_ko,technology_name_en,description,market_driver,verification_status,source_id,valid_from,valid_to,notes
+TECH_ABS,BRAKE_CONTROL,ABS 제어,Anti-lock Braking System,휠 잠김 방지를 위한 유압 제동 제어 기술,차량생산량×ABS장착률×시스템당Coil수,REFERENCE,,,,외부 기술자료 추가 검증 필요
+TECH_ESC,BRAKE_CONTROL,ESC 제어,Electronic Stability Control,차량 자세제어를 포함하는 전자 유압 제동 제어 기술,차량생산량×ESC장착률×시스템당Coil수,REFERENCE,,,,외부 기술자료 추가 검증 필요
+TECH_EPB,BRAKE_CONTROL,EPB 연계,Electronic Parking Brake,전자식 주차제동 또는 제동시스템 연계 기술,차량생산량×EPB장착률×관련Coil적용수량,REFERENCE,,,,MEB5 연계 여부 및 Coil 범위 검증 필요
+TECH_INTEGRATED_BRAKE,BRAKE_CONTROL,통합형 전자제동,Integrated Electronic Brake System,전동부스터와 ESC 기능을 통합하고 모터 및 밸브 제어를 통해 제동 유압을 생성·제어하는 전자제동 기술,차량 생산량×통합형 전자제동 장착률×시스템당 Solenoid Coil 수,VERIFIED,,,,현대모비스 공식 자료 기준 iMEB는 ESC 통합형 전동부스터; 모터·밸브 제어를 통한 유압 생성 확인. 세대별 Coil 총수는 별도 검증 필요
+TECH_ERCV,ACTUATOR_VALVE,터보차저 ERCV 전자기 구동,Electric Recirculation Control Valve,차량 감속 시 발생하는 배압을 빠르게 해소하여 터보차저를 보호하는 Solenoid 방식 전자식 재순환 제어밸브,터보차저 적용 차량 생산량×ERCV 장착률×차량당 ERCV 수량,VERIFIED,TECH_20260912180401,,,캄텍 공식 제품/연혁/브로슈어 기준: ERCV는 터보차저 보호용 Electric Recirculation Control Valve; 2021 자체 설계·생산 및 Garrett 직수출 확인; 적용차종 공개됨; 차량당 수량 및 실제 장착률은 미확정
+TECH_STATOR_UNKNOWN,STATOR,Stator 기술 미확정,Stator Technology Pending,Stator 기반 개발품을 수용하기 위한 임시 기술분류,산출불가,PENDING,,,,BLAT 상세정보 확보 후 구체화
+TECH_BBW,BRAKE_CONTROL,Brake-by-Wire,Brake-by-Wire,브레이크 페달과 제동 액추에이터 사이의 기계적 연결 의존도를 줄이고 전기 신호로 제동을 제어하는 차세대 제동 기술,전동화·SDV·ADAS·자율주행 확대,VERIFIED,TECH_BOSCH_BBW_OFFICIAL,2025,,Bosch/Continental/ZF 공식자료 기반 기술분류. 시장규모와 수주규모는 별도 신호로 관리
+TECH_EMB,BRAKE_CONTROL,전자기계식 제동(EMB),Electro-Mechanical Brake,휠 제동력을 전기모터 기반 액추에이터로 생성하는 전자기계식 제동 기술,Dry Brake-by-Wire·전동화·SDV·고도 자동화,VERIFIED,TECH_ZF_EMB_20250106,2025,,ZF 공식 대형 OEM 계약 및 Brake-by-Wire 포트폴리오 자료 기반

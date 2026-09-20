@@ -1,0 +1,4 @@
+﻿market_group,metric,reference_month,base_countries,fixed_countries,country_list
+선진시장,FIRST_REGISTRATION,2026-03-01,14,11,"AUS,BEL,CHE,DEU,ESP,FRA,ITA,JPN,KOR,NOR,SWE"
+중남미,FIRST_REGISTRATION,2024-12-01,1,1,CHL
+중앙아시아/CIS,FIRST_REGISTRATION,2018-12-01,1,1,KAZ

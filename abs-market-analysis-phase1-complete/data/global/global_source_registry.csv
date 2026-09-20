@@ -1,0 +1,5 @@
+﻿source,market_group,market_side,metric,access,status,source_url
+OECD/ITF,선진시장,DEMAND,FIRST_REGISTRATION,API,ACTIVE,https://data-explorer.oecd.org/
+ANFAVEA,중남미,MULTI,PRODUCTION/REGISTRATION/EXPORT,MONTHLY,READY,https://anfavea.com.br/site/conteudos/carta-da-anfavea/
+INEGI,중남미,MULTI,PRODUCTION/SALES/EXPORT,MONTHLY,READY,https://www.inegi.org.mx/datosprimarios/iavl/default.html
+CAAM,중국,MULTI,PRODUCTION/SALES,MONTHLY,READY,https://www.caam.org.cn/chn/4/cate_31/list_1.html
