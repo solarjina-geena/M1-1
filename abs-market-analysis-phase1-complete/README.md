@@ -54,15 +54,52 @@ http://localhost:8501
 
 ## 데이터 출처
 
-프로젝트에서 사용한 데이터는 기관별 공개/공식자료 범위에서 수집했습니다. 세부 URL, 수집방식, 원본 파일 및 audit 정보는 프로젝트 데이터/스크립트와 REPORT.md의 설명을 함께 확인하십시오.
+프로젝트 과제물 작성에 활용한 자료 출처입니다. API 키 연동을 진행한 서비스와 공식 웹페이지·PDF·공개 문헌을 수집한 사이트를 구분했습니다.
 
-주요 기관:
-- 국내 자동차 관련 공개 통계
-- CAAM (중국)
-- SIAM (인도)
-- ANFAVEA (브라질)
-- 멕시코/칠레 등 공개 통계
-- 제조사·기술기업 공식 공개자료
+### API 연동 사이트
+
+| 기관 / 서비스 | 사이트 | 수집 목적 |
+| --- | --- | --- |
+| DART 전자공시 | opendart.fss.or.kr | 기업 공시, 사업보고서, 재무정보 |
+| 관세청 무역통계 | data.go.kr | 자동차·부품 수출입 통계 |
+| 한국은행 ECOS | ecos.bok.or.kr | 거시경제 및 산업 관련 시계열 |
+| 통계청 KOSIS | kosis.kr | 국내·세계 자동차 생산 통계 |
+| KIPRIS 특허정보 | plus.kipris.or.kr | 특허 검색 및 기술활동 분석 |
+
+위 5개는 프로젝트에서 API 키 연동을 진행했던 서비스입니다. API 키 연동 확인이 실제 데이터 호출 성공 또는 수집 완료를 의미하지는 않습니다.
+
+### 글로벌 자동차 시장 데이터 수집 사이트
+
+| 국가 / 지역 | 기관 | 공식 사이트 / 서비스 | 수집 내용 |
+| --- | --- | --- | --- |
+| 글로벌·OECD | OECD | OECD SDMX | 국가별 신차등록 시계열 |
+| 중국 | CAAM | caam.org.cn | 자동차 생산·판매 |
+| 인도 | SIAM | siam.in | 자동차 생산·내수판매 |
+| 브라질 | ANFAVEA | anfavea.com.br | 생산·수출·등록 |
+| 멕시코 | INEGI | inegi.org.mx | 자동차 생산·판매·수출 |
+| 한국 | KAMA | kama.or.kr | 국내 자동차 생산·내수·수출 |
+| 한국 | KAIDA | kaida.co.kr | 수입차 등록 통계 |
+
+CAAM·ANFAVEA 등은 일반적인 인증형 API 호출 외에 공식 웹페이지 또는 PDF 자료를 수집·분석하는 방식도 사용했습니다.
+
+### 기술동향 근거 수집 사이트
+
+| 기관 | 사이트 | 활용 |
+| --- | --- | --- |
+| Bosch Mobility | bosch-mobility.com | ABS 및 Brake-by-Wire 기술 |
+| Continental | continental.com | 통합제동 및 차세대 제동기술 |
+| ZF | zf.com | EMB·Brake-by-Wire 기술 |
+| Hyundai Mobis | mobis.com | 통합전자제동 기술 |
+| SAE Mobilus | saemobilus.sae.org | MGH-20 등 기술논문 |
+| Google Patents | patents.google.com | 특허 기술문헌 |
+
+### 수집 이력 확인 및 범위
+
+API 키 연동을 확인했던 서비스는 5개이며, 글로벌 시장과 기술동향 분석에는 추가로 공식 사이트·PDF·공개 문헌을 활용했습니다. 위 목록 전체가 실제 API 호출에 성공했다는 의미는 아닙니다.
+
+정확한 호출 URL, 수집일, 성공 여부는 `data/metadata/source_log.csv`와 `collectors/` 폴더를 대조해 확인해야 합니다. 세부 수집방식, 원본 파일 및 audit 정보는 프로젝트 데이터·스크립트와 `REPORT.md`의 설명을 함께 확인하십시오.
+
+뉴스·주식 자료는 2차 과제로 남겨둔 부분이므로 수집 완료 API로 분류하지 않았습니다.
 
 ## 한계 및 다음 단계
 
